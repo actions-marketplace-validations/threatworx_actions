@@ -1,0 +1,25 @@
+name: Run ThreatWorx discovery CLI twigs
+
+description: This action will run ThreatWorx's based discovery CLI - twigs
+
+branding:
+  icon: 'crosshair'  
+  color: 'blue'
+
+inputs:
+  args:
+    description: "Arguments to pass to twigs"
+    default: -vv
+  mode:
+    description: "Which twigs mode to run, defaults to repo"
+    default: repo
+  mode_args:
+    description: "Arguments to twigs mode"
+    
+runs:  
+  using: "composite"
+  steps:  
+    - name: Run twigs
+      shell: bash  
+      run: |
+        twigs ${{ input.args }} ${{ input.mode }} ${{ input.mode_args }}
