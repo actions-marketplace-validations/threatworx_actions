@@ -1,0 +1,19 @@
+name: Install ThreatWorx discovery CLI twigs
+
+description: This action will install ThreatWorx's python based discovery CLI - twigs
+
+branding:
+  icon: 'crosshair'  
+  color: 'blue'
+  
+runs:  
+  using: "composite"
+  steps:  
+    - name: Install and upgrade pip
+      shell: bash  
+      run: |
+        python -m pip install --upgrade pip
+    - name: Install twigs using pip  
+      shell: bash  
+      run: |
+        pip install twigs
