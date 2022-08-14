@@ -22,4 +22,4 @@ runs:
     - name: Run twigs
       shell: bash  
       run: |
-        twigs ${{ input.args }} ${{ input.mode }} ${{ input.mode_args }}
+        twigs ${{ inputs.args }} ${{ inputs.mode }} ${{ inputs.mode_args }}
