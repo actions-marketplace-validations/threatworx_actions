@@ -1,4 +1,4 @@
-name: Run ThreatWorx discovery CLI twigs
+name: ThreatWorx discovery CLI twigs
 
 description: This action will run ThreatWorx's based discovery CLI - twigs
 
